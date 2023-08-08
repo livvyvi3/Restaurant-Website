@@ -27,6 +27,8 @@
     flex-direction: row;
     max-width: 50%;
     position: relative;
+
+    margin: 5rem 0;
 }
 
 .app__gallery-images_container {
@@ -112,12 +114,11 @@
 
 @media screen and (max-width: 1150px) {
     .app__gallery {
-        flex-direction: row;
+        flex-direction: column;
     }
 
     .app__gallery-images {
         max-width: 100%;
-        margin: 5rem 0;
     }
 }
 

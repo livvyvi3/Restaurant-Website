@@ -2,7 +2,7 @@ import React from 'react';
 
 import {BsInstagram, BsArrowLeftShort, BsArrowRightShort}from 'react-icons/bs';
 import{SubHeading} from '../../components';
-import {images, data} from '../../constants';
+import {images} from '../../constants';
 
 import './Gallery.css';
 
@@ -19,7 +19,7 @@ const Gallery = () => {
       current.scrollLeft += 300;
     }
   }
-  retrun(
+  return(
   <div className="app__gallery flex_center">
     <div className="app__gallery-content">
       <SubHeading title="Instagram" />
@@ -27,9 +27,11 @@ const Gallery = () => {
       <p className="p__opensans" style={{color: '#AAA', marginTop: '2rem'}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat mattis ipsum turpis
        elit elit scelerisque egestas mu.</p>
        <button type="button" className="custom__button">View More</button>
-       <div className="app__gallery-images">
+       
+    </div>
+    <div className="app__gallery-images">
         <div className="app__gallery-images_container" ref={scrollRef}>
-          {galleryImages.map((images, index) => (
+          {galleryImages.map((image, index) => (
             <div className="app__gallery-images_card flex__center" key={`gallery_image-${index + 1}`}>
               <img src={image} alt='gallery' />
               <BsInstagram className='gallery__image-icon' />
@@ -42,7 +44,6 @@ const Gallery = () => {
 
         </div>
        </div>
-    </div>
   </div>
 );
 }
